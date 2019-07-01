@@ -1,0 +1,365 @@
+html,body{
+  height:100%;
+  margin: 0;
+  background-color: #fff;
+}
+
+.left-panel-bg {
+  background-color: rgb(214, 214, 214);
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-bucket {
+  cursor: url(images/bucket.png), auto;
+}
+.cursor-color-picker {
+  cursor: url(images/color-drop.png), auto;
+}
+.cursor-line {
+  cursor: url(images/straight-horizontal-line.png), auto;
+}
+.cursor-rectangle {
+  cursor: url(images/rectangle.png), auto;
+}
+
+.cursor-pen {
+  cursor: url(images/pen.png), auto;
+}
+.cursor-eraser {
+  cursor: url(images/double-sided-eraser.png), auto;
+}
+
+.wrapper{
+  display: flex;
+  margin: 20px 0;
+}
+
+.left-panel {
+  flex-basis: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 0 10px auto 10px;
+  box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.5);
+}
+
+.left-panel div.instrument {
+  flex: 0 0 50%;
+  height: 30px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.frame-wrapper {
+  flex-basis: 10%;
+  box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.5);
+}
+
+.canvas {
+
+  flex-basis: 50%;
+  margin: 0 10px;
+
+}
+
+.squares-background {
+  width: 640px;
+  height: 640px;
+  font-size: 0;
+  z-index: 0;
+  position: absolute;
+}
+
+.square {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+
+.square-light {
+  background-color: rgba(202, 202, 202, 0.2);
+}
+
+.square-dark {
+  background-color: rgba(77, 77, 77, 0.2);
+}
+
+.square-mouseover {
+  background-color: rgb(77, 77, 77);
+}
+
+
+.player {
+  flex-basis: 30%;
+  box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+
+.cell {
+  float:left;
+  width: 30%;
+  padding-bottom: 30%;
+  margin:1.66%;
+  background-color: rgb(235, 235, 235);
+}
+
+.square-box{
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.colors div {
+  padding: 10px;
+}
+
+.left-panel-item {
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  width: 50%;
+  white-space: nowrap;
+  display: flex;
+}
+
+.current-color, .previous-color {
+  display: inline-block;
+}
+
+.current-color-circle, .previous-color-circle, .predifined-color1, .predifined-color2, .predifined-color3, .predifined-color4, .predifined-color5 {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border: 1px solid rgb(223, 223, 223);
+}
+
+.circle-form {
+  border-radius: 100%;
+}
+
+.current-color-circle {
+  background-color: rgb(0, 148, 0);
+}
+
+.previous-color-circle {
+  background-color: rgb(255, 0, 0);
+}
+
+.predifined-color1 {
+  background-color: rgb(0, 0, 255);
+}
+
+.predifined-color2 {
+  background-color: rgb(255, 255, 0);
+}
+
+.predifined-color3 {
+  background-color: rgb(255, 0, 0);
+}
+
+.predifined-color4 {
+  background-color: rgb(0, 145, 19);
+}
+
+.predifined-color5 {
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+.frames {
+  position: relative;
+  height: auto
+}
+
+.add-frame {
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.add-frame div {
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.frame {
+  margin-bottom: 5px;
+  width: 100%;
+  border: 1px solid grey;
+
+}
+
+canvas {
+  position: relative;
+  z-index: 0;
+}
+
+.empty-canvas {
+  position: absolute;
+  z-index: 0;
+  width: 640px;
+  height: 640px;
+  visibility: hidden;
+}
+
+.instruments {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.frame-item {
+  position: relative;
+}
+
+.mouseover-frame {
+  border: 2px solid grey;
+}
+
+.click-frame {
+  border: 2px solid rgb(255, 209, 5);
+}
+
+.instrument-hidden {
+  visibility: hidden;
+}
+
+.frame-number {
+  top: 10px;
+  left: 10px;
+  position: relative;
+}
+
+.delete-img, .copy-img, .drag-img {
+  padding: 5px;
+}
+
+.delete-frame {
+  top: -18px;
+  left: 97px;
+  position: relative;
+}
+
+.copy-frame {
+  top: 7px;
+  left: 97px;
+  position: relative;
+}
+
+.drag-frame {
+  position: relative;
+  top: 45px;
+  left: 0px;
+}
+
+.canvas-player {
+  width: 100%;
+  position: unset;
+}
+
+.canvas-main {
+  position: absolute;
+}
+
+.canvas-main1 {
+  z-index: 1;
+}
+
+.color-picker {
+  display: none;
+  }
+
+  .save-img {
+    width: 31%;
+    margin: 5px auto;
+    padding: 14px;
+    border: 1px solid rgb(75, 75, 75);
+  }
+
+
+  .landing-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .information {
+    flex-basis: 30%;
+  }
+
+  .screenshot {
+    flex-basis: 50%;
+  }
+
+  .animation {
+    flex-basis: 20%;
+  }
+
+  .screen-img {
+    width: 100%;
+  }
+
+  form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=button]:hover {
+    opacity: 0.8;
+}
+
+
+.ask-email {
+  color: red;
+  visibility: hidden;
+}
+
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.shortcuts {
+  font-size: 13px;
+}
+
+.animation-img {
+  width: 200px;
+  height: 200px;
+}
+
+
+
